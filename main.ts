@@ -23,7 +23,7 @@ while (true) {
 
 
         // Turn 90 degrees
-        let degrees=90
+        let degrees = 90
         robotbit.StepperTurn(robotbit.Steppers.M1, robotbit.Turns.T1B0)
 
         // Reverse both motors for about 10 cm
