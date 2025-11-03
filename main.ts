@@ -9,8 +9,7 @@
 let distanceToObject: number = 0
 let degrees = 90
 
-// while statement
-while (true) {
+basic.forever(function () {
     // Clear screen and read sonar distance
     basic.clearScreen()
     distanceToObject = sonar.ping(
@@ -24,17 +23,14 @@ while (true) {
         // Reverse both motors for about 10 cm
         robotbit.StpCarMove(-10, 48)
         basic.pause(500)
+
         // Turn 90 degrees
         robotbit.StepperTurn(robotbit.Steppers.M1, robotbit.Turns.T1B4)
         basic.pause(500)
-    }
-
-    // If distance is 10 cm or more, move forward 10 cm
-    if (distanceToObject >= 10) {
-        // move forward 10cm
+    } else {
+        // Move forward 10 cm
         basic.showIcon(IconNames.Yes)
         robotbit.StpCarMove(10, 48)
         basic.pause(500)
     }
-
-}
+})
