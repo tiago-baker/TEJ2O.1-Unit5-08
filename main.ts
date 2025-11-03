@@ -16,7 +16,7 @@ while (true) {
         DigitalPin.P2,
         PingUnit.Centimeters
     )
-    basic.showNumber(distanceToObject)
+    
 
     // If object is closer than 10 cm, reverse and turn right
     if (distanceToObject < 10) {
@@ -24,7 +24,7 @@ while (true) {
 
         // Turn 90 degrees
         let degrees = 90
-        robotbit.StepperTurn(robotbit.Steppers.M1, robotbit.Turns.T1B0)
+        robotbit.StepperTurn(robotbit.Steppers.M1, 0.25)
 
         // Reverse both motors for about 10 cm
         robotbit.StpCarMove(-10, 48)
