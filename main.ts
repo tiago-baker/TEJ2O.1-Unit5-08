@@ -24,7 +24,6 @@ while (true) {
         // Reverse both motors for about 10 cm
         robotbit.StpCarMove(-10, 48)
         basic.pause(500)
-
         // Turn 90 degrees
         robotbit.StepperTurn(robotbit.Steppers.M1, robotbit.Turns.T1B4)
         basic.pause(500)
