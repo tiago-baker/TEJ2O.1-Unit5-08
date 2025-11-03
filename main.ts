@@ -27,7 +27,8 @@ while (true) {
         basic.pause(500)
 
         // Turn 90 degrees
-        robotbit.StepperDegree(robotbit.Steppers.M1, 0.25)
+        robotbit.StepperTurn(robotbit.Steppers.M1, robotbit.Turns.T1B4)
+        basic.pause(500)
     }
 
     // If distance is 10 cm or more, move forward 10 cm
