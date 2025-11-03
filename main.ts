@@ -9,7 +9,7 @@
 let distanceToObject: number = 0
 let degrees = 90
 
-basic.forever(function () {
+while (true){
     // Clear screen and read sonar distance
     basic.clearScreen()
     distanceToObject = sonar.ping(
@@ -33,4 +33,4 @@ basic.forever(function () {
         robotbit.StpCarMove(10, 48)
         basic.pause(500)
     }
-})
+}
