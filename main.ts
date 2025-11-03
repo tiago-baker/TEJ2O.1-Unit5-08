@@ -18,7 +18,6 @@ while (true) {
         DigitalPin.P2,
         PingUnit.Centimeters
     )
-    
 
     // If object is closer than 10 cm, reverse and turn right
     if (distanceToObject < 10) {
